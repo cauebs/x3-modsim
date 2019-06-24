@@ -5,7 +5,14 @@
 
 namespace utils {
 
-/// Aproximate inverse function application using a binary search
+/// Find a numerical aproximation for the application of the inverse of a function via a binary search.
+///
+/// @param  f is the function whose inverse will be applied
+/// @param  y is the value onto which the inverse will be applied
+/// @param  begin is where the search interval should begin
+/// @param  end is where the search interval should end
+/// @param  tolerance is a small value to be used when comparing two floating point numbers
+/// @return The value x for which f(x) = y
 template <typename T, typename F>
 T numerical_inverse(F f, T y, T begin, T end, T tolerance)
 {
