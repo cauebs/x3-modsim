@@ -28,5 +28,6 @@ T numerical_inverse(F f, T y, T begin, T end, T tolerance)
 
     return end;
 }
+}
 
 #endif
