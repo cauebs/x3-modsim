@@ -22,17 +22,4 @@ T numerical_inverse(F f, T y, T begin, T end, T tolerance)
     return end;
 }
 
-template <typename T>
-double chi_squared_pdf(T x, T k)
-{
-    if (x == 0) {
-        return 0;
-    }
-
-    auto y = std::pow(x, k / 2 - 1) * std::exp(-x / 2);
-    y /= std::pow(2, k / 2) * boost::math::tgamma(k / 2);
-    return y;
-}
-}
-
 #endif
